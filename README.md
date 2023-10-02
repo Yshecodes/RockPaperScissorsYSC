@@ -5,7 +5,7 @@
 
  You can find me on Linkedin: https://www.linkedin.com/in/sheila-sugisaki-264853141/
 
-The sounds effect used in this project are from:
+The sound effects used in this project are from:
 Cute voices, accessed on 10/2/2023: https://amitaro.net/
 Cute BGM, accessed on 10/2/2023: https://www.nakano-sound.com/
 
