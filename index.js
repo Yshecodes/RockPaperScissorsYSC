@@ -14,9 +14,9 @@ const possibleResults = {
 };
 
 const gifs = {
-  spock: "/gif/spock.gif",
-  flame: "/gif/flame.gif",
-  loop: "/gif/loop.gif",
+  spock: "gif/spock.gif",
+  flame: "gif/flame.gif",
+  loop: "gif/loop.gif",
 };
 
 const gifManager = {
@@ -30,12 +30,12 @@ const gifManager = {
 const randomGifPath = gifManager.getRandomGifPath();
 
 const soundEffect = {
-  gameStart: new Audio("/sounds/jankenpon.wav"),
-  rematchSound: new Audio("/sounds/aikodesho.wav"),
-  winSound: new Audio("/sounds/omedetou.wav"),
-  loseSound: new Audio("/sounds/zannen.wav"),
-  drawSound: new Audio("/sounds/shoubuda.wav"),
-  pageAccess: new Audio("/sounds/isshoniasobo.wav"),
+  gameStart: new Audio("sounds/jankenpon.wav"),
+  rematchSound: new Audio("sounds/aikodesho.wav"),
+  winSound: new Audio("sounds/omedetou.wav"),
+  loseSound: new Audio("sounds/zannen.wav"),
+  drawSound: new Audio("sounds/shoubuda.wav"),
+  pageAccess: new Audio("sounds/isshoniasobo.wav"),
 };
 
 const user = document.querySelector("#user");
@@ -73,7 +73,7 @@ function displayGif(gifPath) {
   gifContainer.src = gifPath;
 }
 
-displayGif("/gif/loop.gif");
+displayGif("gif/loop.gif");
 soundEffect.pageAccess.play();
 
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -99,13 +99,13 @@ async function gamePlay(userChoice, computerChoice) {
     isDraw = false;
     switch (gameResult) {
       case 4:
-        displayGif("/gif/scissorspaper.gif");
+        displayGif("gif/scissorspaper.gif");
         break;
       case 5:
-        displayGif("/gif/rockscissors.gif");
+        displayGif("gif/rockscissors.gif");
         break;
       case 6:
-        displayGif("/gif/paperrock.gif");
+        displayGif("gif/paperrock.gif");
         break;
     }
     resultDisplay.textContent = `YOU WIN😁!`;
@@ -114,13 +114,13 @@ async function gamePlay(userChoice, computerChoice) {
     isDraw = false;
     switch (gameResult) {
       case 7:
-        displayGif("/gif/scissorsrock.gif");
+        displayGif("gif/scissorsrock.gif");
         break;
       case 8:
-        displayGif("/gif/rockpaper.gif");
+        displayGif("gif/rockpaper.gif");
         break;
       case 9:
-        displayGif("/gif/paperscissors.gif");
+        displayGif("gif/paperscissors.gif");
         break;
     }
     resultDisplay.textContent = `YOU LOSE🥲!`;
@@ -129,13 +129,13 @@ async function gamePlay(userChoice, computerChoice) {
     isDraw = true;
     switch (gameResult) {
       case 1:
-        displayGif("/gif/rock.gif");
+        displayGif("gif/rock.gif");
         break;
       case 2:
-        displayGif("/gif/paper.gif");
+        displayGif("gif/paper.gif");
         break;
       case 3:
-        displayGif("/gif/scissors.gif");
+        displayGif("gif/scissors.gif");
         break;
     }
     resultDisplay.innerHTML = `It's a DRAW😑<br />Choose again!`;
