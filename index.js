@@ -30,12 +30,12 @@ const gifManager = {
 const randomGifPath = gifManager.getRandomGifPath();
 
 const soundEffect = {
-  gameStart: new Audio("/sounds/jankenpon_01.wav"),
-  rematchSound: new Audio("/sounds/aikodesho_01.wav"),
-  winSound: new Audio("/sounds/omedetou_01.wav"),
-  loseSound: new Audio("/sounds/zannen_01.wav"),
-  drawSound: new Audio("/sounds/shoubuda_01.wav"),
-  pageAccess: new Audio("/sounds/isshoniasobo_01.wav"),
+  gameStart: new Audio("/sounds/jankenpon.wav"),
+  rematchSound: new Audio("/sounds/aikodesho.wav"),
+  winSound: new Audio("/sounds/omedetou.wav"),
+  loseSound: new Audio("/sounds/zannen.wav"),
+  drawSound: new Audio("/sounds/shoubuda.wav"),
+  pageAccess: new Audio("/sounds/isshoniasobo.wav"),
 };
 
 const user = document.querySelector("#user");
