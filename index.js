@@ -153,7 +153,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const bgm = document.getElementById("bgm");
-bgm.volume = 0.01;
+bgm.volume = 0.007;
 
 yes.addEventListener("click", () => {
   soundEffect.pageAccess.play();
