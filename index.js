@@ -153,10 +153,10 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const bgm = document.getElementById("bgm");
+console.log(bgm.volume);
 
 yes.addEventListener("click", () => {
   soundEffect.pageAccess.play();
-  bgm.volume = 0.1;
   bgm.play().catch((error) => {
     console.log("An error occurred: " + error);
   });
