@@ -74,7 +74,6 @@ function displayGif(gifPath) {
 }
 
 displayGif("gif/loop.gif");
-soundEffect.pageAccess.play();
 
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -143,10 +142,28 @@ async function gamePlay(userChoice, computerChoice) {
   }
 }
 
+const modal = document.querySelector("#modal");
+const yes = document.getElementById("yes");
+const no = document.getElementById("no");
+
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    modal.showModal();
+  }, 1000);
+});
+
 const bgm = document.getElementById("bgm");
-bgm.volume = 0.009;
-window.onload = function () {
+bgm.volume = 0.01;
+
+yes.addEventListener("click", () => {
+  soundEffect.pageAccess.play();
   bgm.play().catch((error) => {
     console.log("An error occurred: " + error);
   });
-};
+  modal.close();
+});
+
+no.addEventListener("click", () => {
+  soundEffect.pageAccess.play();
+  modal.close();
+});
