@@ -11,6 +11,18 @@
       crossorigin="anonymous"
     ></script>
     <meta name="google-adsense-account" content="ca-pub-2718185808906795" />
+    {% if site.google_ad_client %}
+    <script
+      async
+      src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "{{ site.google_ad_client }}",
+        enable_page_level_ads: true,
+      });
+    </script>
+    {% endif %}
   </head>
   <body>
     <header>
